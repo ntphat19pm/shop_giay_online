@@ -57,10 +57,12 @@ namespace GUI
         }
         private void HienThiKieuLenCombobox()
         {
+            cbo_kieu.Items.Add("2GB");
+            cbo_kieu.Items.Add("4GB");
+            cbo_kieu.Items.Add("8GB");
+            cbo_kieu.Items.Add("16GB");
             cbo_kieu.Items.Add("32GB");
             cbo_kieu.Items.Add("64GB");
-            cbo_kieu.Items.Add("128GB");
-            cbo_kieu.Items.Add("256GB");
         }
         private void HienThiTGBHLenCombobox()
         {
