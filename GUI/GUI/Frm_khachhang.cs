@@ -67,9 +67,12 @@ namespace GUI
                 MessageBox.Show("Mã khách hàng tối đa 5 ký tự!");
                 return;
             }
-            if (txt_sdt.Text.Length > 11)
+            string sdtnv = txt_sdt.Text;
+            string chuoi = "84";
+            if (sdtnv.Length != 11 || !sdtnv.StartsWith(chuoi))
             {
-                MessageBox.Show("Số điện thoại tối đa 11 số");
+                MessageBox.Show("SĐT phải bắt đầu 84 và không dài quá 11 số");
+                txt_sdt.Focus();
                 return;
             }
             if (khachhang_bus.TimKHTheoMa(txt_makh.Text) != null)
