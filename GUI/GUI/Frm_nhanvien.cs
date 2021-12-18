@@ -99,9 +99,12 @@ namespace GUI
                 MessageBox.Show("Vui lòng nhập đầy đủ dữ liệu!");
                 return;
             }
-            if (txt_dt.Text.Length > 11)
+            string sdtnv = txt_dt.Text;
+            string chuoi = "84";
+            if (sdtnv.Length != 11 || !sdtnv.StartsWith(chuoi))
             {
-                MessageBox.Show("Số điện thoại tối đa 11 số");
+                MessageBox.Show("SĐT phải bắt đầu 84 và không dài quá 11 số");
+                txt_dt.Focus();
                 return;
             }
             // Kiểm tra mã nhân viên có độ dài chuỗi hợp lệ hay không             
